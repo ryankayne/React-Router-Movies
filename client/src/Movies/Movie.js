@@ -31,6 +31,9 @@ const Movie = (props) => {
   }
 
   const { title, director, metascore, stars } = movie;
+  function Movie(props) {
+  const random = Movie.find(item => item.id === Number(props.match.params.id))
+  } 
   return (
     <div className="save-wrapper">
       <div className="movie-card">

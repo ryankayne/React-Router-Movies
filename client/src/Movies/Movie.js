@@ -5,7 +5,8 @@ const Movie = (props) => {
   const [movie, setMovie] = useState();
  
   useEffect(() => {
-    const id = 1;
+    const id = props.match.params.id;
+    console.log(props);
     // change ^^^ that line and grab the id from the URL
     // You will NEED to add a dependency array to this effect hook
 
@@ -31,6 +32,9 @@ const Movie = (props) => {
   }
 
   const { title, director, metascore, stars } = movie;
+  function Movie(props) {
+  const random = Movie.find(item => item.id === Number(props.match.params.id))
+  } 
   return (
     <div className="save-wrapper">
       <div className="movie-card">
